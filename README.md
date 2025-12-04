@@ -2,7 +2,7 @@
 
 ## 📰News
 
---[2025/12] all code has been released
+--[2025/12] all code has been released, pretrain-weight will be released in the near future
 
 --[2025/11] our code will be released in the near future
 
