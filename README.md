@@ -51,7 +51,7 @@ pip install -r requirement.txt
 We will announce the pre-training weights shortly
 
 ### 5.Train and Inference
-You can use the `MultimodalMain.ipynb` to train model and inference, pay attention to `line:`, `line:` and ``, the path for pretrain weight and dataset, here you can choose whether to pre-train
+You can use the `MultimodalMain.ipynb` to train model and inference, pay attention to `config.load_model_path = ''`, `dataset_file_path` and `test_file_path`, the path for pretrain weight and dataset, here you can choose whether to pre-train
 ```python
 # main
 if __name__ == "__main__":
