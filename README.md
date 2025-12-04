@@ -2,6 +2,8 @@
 
 ## 📰News
 
+--[2025/12] all code has been released
+
 --[2025/11] our code will be released in the near future
 
 --[2025/11] 🥳our paper was accepted by 《Pattern Recognition》 
@@ -49,7 +51,7 @@ pip install -r requirement.txt
 We will announce the pre-training weights shortly
 
 ### 5.Train and Inference
-You can use the `MultimodalMain.ipynb` to train model and inference, here you can choose whether to pre-train
+You can use the `MultimodalMain.ipynb` to train model and inference, pay attention to `line:`, `line:` and ``, the path for pretrain weight and dataset, here you can choose whether to pre-train
 ```python
 # main
 if __name__ == "__main__":

@@ -11,7 +11,6 @@ class DatasetHelper:
         self.tokenizer = TextTokenizer(num_words_to_keep)
 
     def preprocess_labels(self, train_data, val_data):
-        # 如果是预测
         if val_data == None:
             return train_data.get_labels()
         return train_data.get_labels(), val_data.get_labels()

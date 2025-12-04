@@ -17,10 +17,12 @@ import matplotlib.pyplot as plt
 import pywt
 
 # 写入数据
-def write_to_file(path, outputs):
+def write_to_file(path, outputs, save_path=None):
+    if save_path == None:
+        save_path = path
     df = pd.read_csv(path)
     df['predict'] = outputs
-    df.to_csv(path,index=False)
+    df.to_csv(save_path,index=False)
 
 # 保存模型
 def save_model(output_path, model_type, model):
