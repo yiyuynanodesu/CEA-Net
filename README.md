@@ -19,12 +19,61 @@
 ![image-20251121201827250](./assets/model.png)
 
 ## 🔧How To Use
+### 1.Clone this repo
+```bash
+git clone https://github.com/yiyuynanodesu/CEA-Net.git
+cd CEA-Net
+```
+### 2.Prepare Dataset
+The dataset we used in our paper is now open source, you can download our dataset in [MCDD](https://github.com/yiyuynanodesu/Multimodal-Corn-Disease-Dataset) and put it in the **./dataset** directory. The file structure is as follows:
+```bash
+--dataset
+    --MCDD
+        --csv
+            --test
+            --train
+        --dataf
+            --test
+            --train
 
-Comming Soon...
+```
+### 3.Prepare Enviroment
+Our model is based on **PyTorch2.3.0 Python3.12 ubuntu22.04 CUDA  12.1**
+```bash
+conda create -n cea-net python=3.12
+conda activate cea-net
+pip install -r requirement.txt
+```
+
+### 4.Prepare Pre-traind Weights
+We will announce the pre-training weights shortly
+
+### 5.Train and Inference
+You can use the `MultimodalMain.ipynb` to train model and inference, here you can choose whether to pre-train
+```python
+# main
+if __name__ == "__main__":
+    if do_train:
+        preTrain()
+        train()
+    
+    if do_test:
+        if config.load_model_path is None and not do_train:
+            print('Please enter the path load_model_path of the trained model or choose to add do_train arg')
+        else:
+            test()
+```
+
+## Acknowledgement：
+Our code is inseparable from the following authors' works. If our repo is helpful to you, please also take a look at the excellent works of these authors and give them a star✨:
+[Sparx](https://github.com/LMMMEng/SparX.git)
+[WaveMix](https://github.com/pranavphoenix/WaveMix)
+[AACE](https://github.com/T-Ratchatorn/AACE.git)
+[KuDA](https://github.com/MKMaS-GUET/KuDA)
 
 ## 🎓Cite Our Work
 
-Comming Soon
+Our paper is in production...
 
 ## 🤝Contact
 
