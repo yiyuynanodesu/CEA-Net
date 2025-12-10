@@ -357,8 +357,6 @@ class DWTForward(nn.Module):
             yh.append(high)
 
         return ll, yh
-
-from numpy.lib.function_base import hamming
    
 xf1 = DWTForward(J=1, mode='zero', wave='db1').to(device)    
 xf2 = DWTForward(J=2, mode='zero', wave='db1').to(device)    

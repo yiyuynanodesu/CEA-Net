@@ -1,4 +1,4 @@
-# CEA-Net: A Multi-modal Model For Corn Disease Classification With Dynamic Fusion And Cross-Layer Connection Mechanism
+# [CEA-Net: A Multi-modal Model For Corn Disease Classification With Dynamic Fusion And Cross-Layer Connection Mechanism](https://www.sciencedirect.com/science/article/abs/pii/S0031320325014517)
 
 ## 📰News
 
@@ -27,14 +27,14 @@ git clone https://github.com/yiyuynanodesu/CEA-Net.git
 cd CEA-Net
 ```
 ### 2.Prepare Dataset
-The dataset we used in our paper is now open source, you can download our dataset in [MCDD](https://github.com/yiyuynanodesu/Multimodal-Corn-Disease-Dataset) and put it in the **./dataset** directory. The file structure is as follows:
+The dataset we used in our paper is now open source, you can download our dataset in [MCDD](https://github.com/yiyuynanodesu/Multimodal-Corn-Disease-Dataset) and put it in the `./dataset` directory. The file structure is as follows:
 ```bash
 --dataset
     --MCDD
         --csv
             --test
             --train
-        --dataf
+        --data
             --test
             --train
 
@@ -45,6 +45,18 @@ Our model is based on **PyTorch2.3.0 Python3.12 ubuntu22.04 CUDA  12.1**
 conda create -n cea-net python=3.12
 conda activate cea-net
 pip install -r requirement.txt
+pip install PyWavelets
+pip install numpy==1.26.4
+pip install torchinfo
+pip install tensorflow
+pip install keras==3.8.0
+
+# then you have to git clone VMamba to install selective_
+git clone https://github.com/MzeroMiko/VMamba.git
+cd VMamba/kernels/selective_scan/
+# modify setup.py line 45  MODES = ["oflex"]  ====> MODES = ["core", "oflex"]
+vim setup.py
+pip install .
 ```
 
 ### 4.Prepare Pre-traind Weights
@@ -74,9 +86,21 @@ Our code is inseparable from the following authors' works. If our repo is helpfu
 [KuDA](https://github.com/MKMaS-GUET/KuDA)
 
 ## 🎓Cite Our Work
-
-Our paper is in production...
+If our work is useful for your research, please consider citing and give us a star ⭐
+```
+@article{WANG2026112788,
+title = {CEA-Net: A multi-modal model for corn disease classification with dynamic fusion and cross-layer connection mechanism},
+journal = {Pattern Recognition},
+volume = {173},
+pages = {112788},
+year = {2026},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2025.112788},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320325014517},
+author = {Haoyang Wang and Guoxiong Zhou and Guiyun Chen},
+keywords = {Corn disease, Multimodal, Deep learning, Classification, Image and text},
+}
+```
 
 ## 🤝Contact
-
 > Please feel free to contact: `wanghy2022@csuft.edu.cn`. We are very pleased to communicate with you and will maintain this repository during our free time.
