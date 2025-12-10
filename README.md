@@ -51,7 +51,7 @@ pip install torchinfo
 pip install tensorflow
 pip install keras==3.8.0
 
-# then you have to git clone VMamba to install selective_
+# then you have to git clone VMamba to install selective_scan
 git clone https://github.com/MzeroMiko/VMamba.git
 cd VMamba/kernels/selective_scan/
 # modify setup.py line 45  MODES = ["oflex"]  ====> MODES = ["core", "oflex"]
